@@ -35,6 +35,3 @@ func (c *Cache) Delete(key string) {
 	defer c.mu.Unlock()
 	delete(c.store, key)
 }
-func main() {
-	New()
-}
