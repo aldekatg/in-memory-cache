@@ -1,23 +1,21 @@
-# in-memory-cache
-<div class="markdown prose w-full break-words dark:prose-invert light">
-   <pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>markdown</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-markdown"><span class="hljs-section"># In-Memory Cache</span>
+<div _ngcontent-ng-c2020242443="" selection="" class="response-container-content ng-tns-c2020242443-22"><!----><!----><!----><!----><div _ngcontent-ng-c3181943514="" class="response-content ng-tns-c2020242443-22"><!----><!----><message-content _ngcontent-ng-c3181943514="" class="model-response-text ng-star-inserted" _nghost-ng-c2149693931="" id="message-content-id-r_b5d22f6a3466662a" style="height: auto;"><div _ngcontent-ng-c2149693931="" class="markdown markdown-main-panel" dir="ltr" style="--animation-duration: 600ms; --fade-animation-function: linear; --first-token-animation-duration: 600ms;"><h2 data-sourcepos="1:1-1:12" class="">README.md</h2><h3 data-sourcepos="3:1-3:15" class="">Пакет Cache</h3><p data-sourcepos="5:1-5:88"><span>Пакет </span><code class="">cache</code><span> предоставляет структуру </span><code class="">Cache</code><span> для хранения данных в оперативной памяти.</span></p><h3 data-sourcepos="7:1-7:19" class="">Структура Cache</h3><p data-sourcepos="9:1-9:119"><span>Структура </span><code class="">Cache</code><span> представляет собой кэш,</span><span> оптимизированный для хранения и извлечения значений по ключам.</span><span> Она использует синхронизацию для обеспечения безопасности при одновременном доступе к кэшу.</span></p><p data-sourcepos="11:1-11:9"><strong>Поля:</strong></p><ul data-sourcepos="13:1-13:11"><li data-sourcepos="13:1-13:11"><code class="">mu</code><span>:</span><span> Мьютекс для синхронизации доступа к кэшу.</span></li><li data-sourcepos="14:1-14:68"><code class="">store</code><span>:</span><span> Хранилище данных в виде словаря </span><code class="">map[string]interface{}</code><span>.</span></li></ul><h3 data-sourcepos="16:1-16:11" class="">Функции</h3><p data-sourcepos="18:1-18:10"><strong>New()</strong><span>:</span></p><p data-sourcepos="20:1-20:32"><span>Создает новый экземпляр </span><code class="">Cache</code><span>.</span></p><p data-sourcepos="22:1-22:20"><strong>Set(key, value)</strong><span>:</span></p><p data-sourcepos="24:1-24:48"><span>Добавляет значение </span><code class="">value</code><span> в кэш по ключу </span><code class="">key</code><span>.</span></p><p data-sourcepos="26:1-26:13"><strong>Get(key)</strong><span>:</span></p><p data-sourcepos="28:1-28:43"><span>Возвращает значение из кэша по ключу </span><code class="">key</code><span>.</span><span> Если значение не найдено,</span><span> возвращается </span><code class="">nil</code><span>.</span></p><p data-sourcepos="30:1-30:16"><strong>Delete(key)</strong><span>:</span></p><p data-sourcepos="32:1-32:40"><span>Удаляет значение из кэша по ключу </span><code class="">key</code><span>.</span></p><h3 data-sourcepos="34:1-34:25" class="">Примеры использования</h3><response-element _nghost-ng-c1654718892="" ng-version="0.0.0-PLACEHOLDER"><!----><!----><!----><!----><!----><!----><code-block _ngcontent-ng-c1654718892="" _nghost-ng-c3347506675="" class="ng-tns-c3347506675-25 ng-star-inserted" style=""><!----><!----><!----><div _ngcontent-ng-c3347506675="" class="code-block ng-tns-c3347506675-25 ng-trigger ng-trigger-codeBlockRevealAnimation" jslog="223238;track:impression;BardVeMetadataKey:[[&quot;r_b5d22f6a3466662a&quot;,&quot;c_32a54baf4647bc1f&quot;,null,&quot;rc_e2e5dbfd1f1b351d&quot;,null,null,&quot;ru&quot;,null,1,null,null,0,0]]" style="display: block;"><div _ngcontent-ng-c3347506675="" class="code-block-decoration header gmat-subtitle-1 ng-tns-c3347506675-25 ng-star-inserted" style=""><span _ngcontent-ng-c3347506675="" class="ng-tns-c3347506675-25">Go</span></div><!----><div _ngcontent-ng-c3347506675="" class="code-block-internal-container ng-tns-c3347506675-25"><div _ngcontent-ng-c3347506675="" class="animated-opacity ng-tns-c3347506675-25"><pre _ngcontent-ng-c3347506675="" class="ng-tns-c3347506675-25"><code _ngcontent-ng-c3347506675="" role="text" data-test-id="code-content" class="code-container ng-tns-c3347506675-25" data-sourcepos="36:1-57:1"><span class="hljs-keyword">import</span> <span class="hljs-string">"github.com/your-username/cache"</span>
 
-<span class="hljs-section">## Описание</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+<span class="hljs-comment">// Создание нового кэша</span>
+cache := cache.New()
 
-Этот проект реализует простой in-memory cache (кэш в оперативной памяти) на языке Go с базовыми методами <span class="hljs-code">`Get`</span>, <span class="hljs-code">`Set`</span>, и <span class="hljs-code">`Delete`</span>.
+<span class="hljs-comment">// Добавление значения в кэш</span>
+cache.Set(<span class="hljs-string">"key1"</span>, <span class="hljs-string">"value1"</span>)
 
-<span class="hljs-section">## Установка</span>
+<span class="hljs-comment">// Получение значения из кэша</span>
+value := cache.Get(<span class="hljs-string">"key1"</span>)
+fmt.Println(value) <span class="hljs-comment">// Output: value1</span>
 
-<span class="hljs-bullet">1.</span> Склонируйте репозиторий:
+<span class="hljs-comment">// Удаление значения из кэша</span>
+cache.Delete(<span class="hljs-string">"key1"</span>)
 
-<span class="hljs-code">
-git clone https://github.com/aldekatg/in-memory-cache.git
-</span></code></div></div></pre>
-   <ol start="2">
-      <li>
-         <p>Перейдите в директорию проекта:</p>
-         <pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>sh</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-sh"><span class="hljs-built_in">cd</span> in-memory-cache
-</code></div></div></pre>
-      </li>
-   </ol>
-</div>
+<span class="hljs-comment">// Проверка наличия значения в кэше</span>
+value = cache.Get(<span class="hljs-string">"key1"</span>)
+fmt.Println(value) <span class="hljs-comment">// Output: &lt;nil&gt;</span>
+}
+</code></pre></div></div></div></code-block></response-element></div></div></div></div></div>
